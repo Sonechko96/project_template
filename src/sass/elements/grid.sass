@@ -1,0 +1,70 @@
+.grid
+  margin-left: -.9375rem
+  margin-right: -.9375rem
+  &_mobile
+    display: flex
+  &_multiline
+    flex-wrap: wrap
+  &_ai-c
+    align-items: center
+  &_jc-c
+    justify-content: center
+  &_s-b
+    justify-content: space-between
+  &__cell
+    display: block
+    flex-basis: 0
+    flex-grow: 1
+    flex-shrink: 1
+    padding: .9375rem
+    &_narrow
+      flex: none
+  &_vert-gap-20 &__cell
+    margin-bottom: -10px
+
+@media screen and (min-width: 769px)
+  .grid
+    display: flex
+    &__cell
+      &_1-2
+        flex: none
+        width: 50%
+      &_1-3
+        flex: none
+        width: 33.33333%
+      &_2-5
+        flex: none
+        width: 40%
+
+  @for $i from 1 through 12
+    .grid__cell_is-#{$i}
+      flex: none
+      width: $i * 8.3333333333%
+
+@media screen and (min-width: 769px) and (max-width: 1024px)
+  .grid
+    &__cell
+      &_full-md
+        flex: none
+        width: 100%
+      &_1-2_md
+        flex: none
+        width: 50%
+      &_1-3_md
+        flex: none
+        width: 33.33333%
+      &_order-1-md
+        order: 1
+
+@media screen and (max-width: 768px)
+  .grid
+    &_jc-sa-sm
+      justify-content: space-around
+    &_column-mobile
+      flex-direction: column
+    &__cell
+      &_full-sm
+        flex: none
+        width: 100%
+      &_order-1-sm
+        order: 1

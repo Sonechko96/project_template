@@ -1,0 +1,33 @@
+*
+  box-sizing: border-box
+
+html
+  font-size: 16px
+
+body, button, input, select, textarea
+  font-family: 'Open Sans', sans-serif
+  color: $dark
+  font-weight: 400
+
+.container
+  position: relative
+  max-width: 1300px
+  width: 100%
+  margin: 0 auto
+  padding: 0 15px
+
+a
+  color: $greyish-purple
+  text-decoration: none
+  &:hover
+    color: $aqua-green
+
+img
+  max-width: 100%
+
+@media (max-width: 1440px)
+  .container
+    max-width: 1000px
+@media (max-width: 1024px)
+  .container
+    max-width: 900px
